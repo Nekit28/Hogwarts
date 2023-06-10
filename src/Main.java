@@ -18,7 +18,7 @@ public class Main {
         System.out.println(gregoryGoyle);
         Metods.printSeparator();
         Рufflepuff zachariahSmith = new Рufflepuff("Zachariah Smith", 51, 44, 78, 56, 40);
-        Рufflepuff cedricDiggory = new Рufflepuff("Cedric Diggory", 77, 66, 90, 65, 89);
+        Рufflepuff cedricDiggory = new Рufflepuff(" Cedric Diggory", 77, 66, 90, 65, 89);
         Рufflepuff justinFinchFletchley = new Рufflepuff("Justin Finch-Fletchley", 66, 65, 34, 88, 75);
         System.out.println(zachariahSmith);
         System.out.println(cedricDiggory);
