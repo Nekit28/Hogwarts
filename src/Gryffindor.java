@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Gryffindor extends Hogwarts {
 
     private int nobility;
@@ -36,10 +38,21 @@ public class Gryffindor extends Hogwarts {
     }
 
     @Override
+    int calculateSpecificScore() {
+        return this.nobility + this.honor + this.bravery;
+    }
+
+    @Override
+    void printCompareOfStudents(Hogwarts best, Hogwarts worst) {
+        System.out.println(String.format("%s лучший Гриффиндорец, чем %s", best.getName(), worst.getName()));
+    }
+
+
+    @Override
     public String toString() {
-        return "Гриффиндор: " + "Имя - " + getName() + ", Сила магии - " + getPowerMagic() + ", Трансгрессия - " + getTransgression() +
+        return "Gryffindor: " + super.toString() +
                 ", Благородство - " + nobility +
-                ", Честь - " + honor +
-                ", Храбрость - " + bravery ;
+                ", честь - " + honor +
+                ", Храбрость - " + bravery;
     }
 }

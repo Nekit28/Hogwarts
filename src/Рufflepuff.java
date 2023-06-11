@@ -35,8 +35,19 @@ public class Рufflepuff extends Hogwarts {
     }
 
     @Override
+    int calculateSpecificScore() {
+        return this.diligence + this.honesty + this.loyalty;
+    }
+    @Override
+    void printCompareOfStudents(Hogwarts best, Hogwarts worst) {
+        System.out.println(String.format("%s лучший Пуффендуец, чем %s", best.getName(), worst.getName()));
+    }
+
+
+
+    @Override
     public String toString() {
-        return "Пуффендуй: " + " Имя - " + getName() + ", Сила магии - " + getPowerMagic() + ", Трансгрессия - " + getTransgression() +
+        return "Рufflepuff:" + super.toString() +
                 ", Трудолюбие - " + diligence +
                 ", Верность - " + loyalty +
                 ", Честность - " + honesty;

@@ -45,11 +45,20 @@ public class Slytherin extends Hogwarts {
     }
 
     @Override
+    int calculateSpecificScore() {
+        return this.canning + this.determination + this.ambition + this.power;
+    }
+    @Override
+    void printCompareOfStudents(Hogwarts best, Hogwarts worst) {
+        System.out.println(String.format("%s лучший Слизеринец, чем %s", best.getName(), worst.getName()));
+    }
+
+    @Override
     public String toString() {
-        return "Слизерин: " + " Имя - " + getName() + ", Сила магии - " + getPowerMagic() + ", Трансгрессия - " + getTransgression() +
+        return "Slytherin: " + super.toString() +
                 ", Хитрость - " + canning +
                 ", Решительность - " + determination +
-                ", Амбициозность - " + ambition +
+                ", Амбиции - " + ambition +
                 ", Власть - " + power;
     }
 }
